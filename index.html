@@ -1,1 +1,138 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="CV">
+    <header>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">About me</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Code</a></li>
+                <li><a href="#">Languages</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="left">
+            <img class="photo" src="photo-2023-10-25-140017.jpeg" alt="My photo">
+            <section class="contact">
+                <h2>Contact</h2>
+                <ul>
+                    <li>
+                        Telegram:
+                        <br>
+                        @Platinum909
+                    </li>
+                    <li>
+                        Discord:
+                        <br>
+                        platinum908
+                    </li>
+                    <li>
+                        Number:
+                        <br>
+                        +79110707455
+                    </li>
+                    <li>
+                        Email:
+                        <br>
+                        estnuntius@gmail.com
+                    </li>
+                    <li>
+                        Address:
+                        <br>
+                        Russia, Kaliningrad
+                    </li>
+                </ul>
+            </section>
+            <section class="education">
+                <h2>Education</h2>
+                <ul>
+                    <li>
+                        Russian - native
+                    </li>
+                    <li>
+                        English - A2
+                    </li>
+                    <li>
+                        Kaliningrad Business College (KBK)
+                        <br>
+                        IT profession
+                        <br>
+                        2022 - now
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="right">
+            <section class="name">
+                <h1>
+                    Erik
+                    <br>
+                    Idrisov
+                </h1>
+                <p>Future Front-End developer</p>
+            </section>
+            <section class="about">
+                <h2>About me</h2>
+                <p>
+                    I am an aspiring programmer with foundational knowledge in C# and frontend development. I enjoy creating interactive web applications and continuously expanding my skill set. My passion lies in solving complex problems and learning new technologies to improve my craft.
+                </p>
+            </section>
+            <section class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Visual Studio</li>
+                    <li>Figma</li>
+                    <li>Git</li>
+                    <li>HTML/CSS</li>
+                    <li>C#</li>
+                </ul>
+            </section>
+            <section class="code">
+                <h2>Code example</h2>
+<pre>
+<code>
+    private async void Button_Click_1(object sender, RoutedEventArgs e)
+    {
+        OpenFileDialog ofd = new OpenFileDialog();
+        ofd.Filter = "Text files(*.txt)|*.txt";
+        if (ofd.ShowDialog() == true)
+        {
+            string fileContent = await File.ReadAllTextAsync(ofd.FileName);
+            string[] components = fileContent.Split(new char[] { ' ', ',', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+    
+            DateTime[] dates = components.Select(component => DateTime.Parse(component)).ToArray();
+            DateTime latestDate = dates.Max();
+    
+            pathText.Text = ofd.FileName;
+            FileContentTextBox.Text = fileContent;
+            Count.Text = latestDate.ToString("yyyy-MM-dd");
+        }
+    }               
+</code>
+</pre>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <a class="github" href="https://github.com/Platinum908">
+            <img class="gitlogo" src="25231.png" alt="GitHub">
+            My GitHub
+        </a>
+        <p class="year">2022-2024</p>
+        <a class="rsschool" href="https://rs.school/js/">
+            <img class="rslogo" src="rs-school-logo.svg" alt="RS School">
+        </a>
+    </footer>
+</div>
+</body>
+</html>
